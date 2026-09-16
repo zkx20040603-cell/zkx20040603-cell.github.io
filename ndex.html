@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEMINI STAR — Seoul Streetwear</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    background: rgba(11,11,11,0.95);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(circle at center, #292929 0%, #111 35%, #050505 75%);
+}
+
+.hero-content h1 {
+    font-size: clamp(60px, 12vw, 160px);
+    letter-spacing: 12px;
+    line-height: 0.9;
+}
+
+.star {
+    font-size: 55px;
+    margin: 25px 0;
+}
+
+.hero-content p {
+    letter-spacing: 6px;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 35px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    font-size: 38px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #888;
+    margin-bottom: 50px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background: #151515;
+    overflow: hidden;
+}
+
+.product-img {
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,#292929,#111);
+    font-size: 70px;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.price {
+    margin-top: 15px;
+    color: white !important;
+    font-size: 15px !important;
+}
+
+.lookbook {
+    background: #f1f1f1;
+    color: #111;
+}
+
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.look {
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    padding: 35px;
+    background: linear-gradient(145deg,#555,#111);
+    color: white;
+}
+
+.look.small {
+    height: 240px;
+}
+
+.lookbook-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.look h3 {
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.about {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.contact {
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.contact p {
+    color: #999;
+    margin: 15px 0;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 12px;
+}
+
+@media(max-width: 800px) {
+    nav a {
+        display: none;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lookbook-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        letter-spacing: 5px;
+    }
+}
+
+@media(max-width: 500px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">GEMINI ★ STAR</div>
+
+    <div>
+        <a href="#collection">COLLECTION</a>
+        <a href="#lookbook">LOOKBOOK</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>GEMINI</h1>
+        <div class="star">★</div>
+        <h1>STAR</h1>
+
+        <p>BE YOUR OWN STAR.</p>
+
+        <a href="#collection" class="btn">
+            COLLECTION 보기
+        </a>
+    </div>
+</section>
+
+<section id="collection">
+
+    <h2 class="section-title">NEW COLLECTION</h2>
+
+    <p class="section-subtitle">
+        GEMINI STAR 2026 — SEOUL STREETWEAR
+    </p>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-img">★</div>
+            <div class="product-info">
+                <h3>STAR LOGO T-SHIRT</h3>
+                <p>OVERSIZED FIT</p>
+                <p class="price">₩59,000</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-img">✦</div>
+            <div class="product-info">
+                <h3>GEMINI HOODIE</h3>
+                <p>HEAVYWEIGHT COTTON</p>
+                <p class="price">₩109,000</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-img">✧</div>
+            <div class="product-info">
+                <h3>GEMINI DENIM</h3>
+                <p>WIDE STRAIGHT FIT</p>
+                <p class="price">₩129,000</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-img">★</div>
+            <div class="product-info">
+                <h3>STAR JACKET</h3>
+                <p>URBAN OUTERWEAR</p>
+                <p class="price">₩159,000</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="lookbook" class="lookbook">
+
+    <h2 class="section-title">LOOKBOOK</h2>
+
+    <p class="section-subtitle">
+        SEOUL / NIGHT / STREET
+    </p>
+
+    <div class="lookbook-grid">
+
+        <div class="look">
+            <h3>SEOUL<br>STREET</h3>
+        </div>
+
+        <div class="lookbook-side">
+
+            <div class="look small">
+                <h3>NIGHT<br>VIBES</h3>
+            </div>
+
+            <div class="look small">
+                <h3>OWN<br>YOUR STYLE</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+
+    <div class="about">
+
+        <h2 class="section-title">ABOUT GEMINI STAR</h2>
+
+        <p>
+            GEMINI STAR는 서로 다른 개성과 스타일을 존중하는
+            서울 기반의 스트릿 패션 브랜드입니다.
+            <br><br>
+            우리는 정해진 스타일을 따라가기보다
+            자신만의 방식으로 패션을 표현하는 것을 중요하게 생각합니다.
+            <br><br>
+            두 개의 별처럼 서로 다른 개성이 만나
+            하나의 새로운 스타일을 만들어냅니다.
+        </p>
+
+        <br><br>
+
+        <p>
+            <strong>BE YOUR OWN STAR.</strong>
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">CONTACT</h2>
+
+    <p>SEOUL, KOREA</p>
+    <p>geministar.official@gmail.com</p>
+    <p>Instagram @geministar.official</p>
+
+    <br>
+
+    <a href="mailto:geministar.official@gmail.com" class="btn">
+        CONTACT US
+    </a>
+
+</section>
+
+<footer>
+    © 2026 GEMINI STAR. ALL RIGHTS RESERVED.
+</footer>
+
+</body>
+</html>
